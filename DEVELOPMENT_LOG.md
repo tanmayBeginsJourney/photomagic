@@ -6,7 +6,7 @@ This file tracks significant commits and the changes they include.
 
 ## Commit: feat(landing): implement refined hero carousel and header styling
 
-**Commit Hash:** 433f9b2 (on feature/landing-page branch)
+**Commit Hash:** 35ed425 (on feature/landing-page branch)
 
 **Date:** (Please fill in the date of the commit)
 
