@@ -1,0 +1,86 @@
+.image-carousel-section {
+  width: 100%;
+  /* max-width: 1600px; */ /* Optional: to cap max width on very large screens */
+  /* margin: 0 auto 2rem auto; */ /* Center if max-width is used, and space below */
+  overflow: visible; /* Changed from hidden to allow pseudo-element to be visible */
+  position: relative; /* For absolute positioning of overlay text AND pseudo-element */
+  /* min-height: 400px; */ /* Height will be driven by carousel-image-container */
+  background-color: #E88D67; /* Peach background color */
+  padding-top: 3rem; /* Added padding on top to push carousel down */
+  padding-bottom: 50px; /* Add padding to make space for the jagged edge */
+}
+
+.image-carousel-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Height of the jagged effect */
+  background-color: #FFF9F5; /* Color of the section below (page background) */
+  clip-path: polygon(
+    0% 100%, 100% 100%, /* Bottom edge */
+    100% 0%, /* Top-right point of the shape */
+    95% 20%, 90% 0%, 85% 20%, 80% 0%, 75% 20%, 70% 0%, 65% 20%, 60% 0%, 55% 20%, 50% 0%,
+    45% 20%, 40% 0%, 35% 20%, 30% 0%, 25% 20%, 20% 0%, 15% 20%, 10% 0%, 5% 20%, 0% 0% /* Jagged top edge points */
+  );
+  z-index: 5; /* Ensure it's above the carousel section bg but below content on top */
+}
+
+.carousel-image-container {
+  width: 100%;
+  height: 50vh; /* Reduced height, adjust as needed (e.g., 400px, 450px) */
+  position: relative;
+  overflow: hidden; /* For zoom effect */
+  border-radius: 20px; /* Rounded corners for the carousel itself */
+  margin: 0 auto 3rem auto; /* Adjusted bottom margin to match top padding for centering */
+  max-width: 1400px; /* Optional: Max width for the carousel container */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Subtle shadow for the carousel */
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container, might crop */
+  display: block; /* Remove extra space below image */
+  transition: opacity 1s ease-in-out, transform 10s cubic-bezier(0.25, 0.1, 0.25, 1); /* Slower transform for subtle continuous zoom */
+  transform: scale(1); /* Initial scale */
+}
+
+/* Active slide image styling */
+.carousel-image.active-slide {
+  opacity: 1;
+  transform: scale(1.1); /* Zoom effect for the active slide over 10s */
+}
+
+.image-overlay-text {
+  position: absolute;
+  top: 50%; 
+  left: 5%;  /* Slightly more indent */
+  transform: translateY(-50%); 
+  width: auto; 
+  max-width: 50%; /* Allow text to take up to half the carousel width */
+  color: white;
+  text-align: left; 
+  background-color: transparent; 
+  padding: 2rem; /* Increased padding around text */
+  font-family: 'Inter', sans-serif; 
+  font-weight: 700; 
+  font-size: 5.5rem; /* Significantly increased font size */
+  line-height: 1.2; /* Adjusted line height for larger font */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Slightly stronger shadow for better readability */
+  transition: opacity 0.8s ease-in-out;
+  opacity: 0; 
+  z-index: 10; 
+}
+
+.image-overlay-text.visible {
+  opacity: 1;
+}
+
+.image-overlay-text p {
+    margin: 0;
+    /* The text should naturally flow and occupy height based on content and font size */
+}
+
+/* Consider adding fade in/out for text and image transitions */ 

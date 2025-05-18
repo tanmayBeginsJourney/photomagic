@@ -1,0 +1,110 @@
+/* Remove or repurpose old .hero-section styles as it's replaced by ImageCarousel and new cta-section */
+/* .hero-section { ... } */
+/* .hero-content { ... } */
+/* .hero-headline { ... } */
+/* .hero-subheadline { ... } */
+/* .hero-cta-button { ... } */
+
+.landing-page-main-content {
+  padding: 1rem 2.5rem; /* Reduced top/bottom padding as sections will have their own */
+}
+
+/* CTA Section - Styles for a boxed appearance */
+.cta-section {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background-color: #FFFFFF; /* White background for the box */
+  border-radius: 20px;
+  margin: 2rem auto; /* Centered with auto margins */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07); /* Softer, more diffused shadow */
+  max-width: 900px; /* Control max width of the box */
+}
+
+.cta-headline {
+  font-size: 2.2rem; /* Playful and inviting */
+  font-weight: 700; /* Using Inter bold here */
+  color: #B56576; /* A muted rose/mauve color for the headline */
+  margin-bottom: 0.75rem;
+}
+
+.cta-subheadline {
+  font-size: 1.2rem; /* Larger than standard paragraph text */
+  color: #6A5D5D; /* A soft, warm grey */
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 600px; /* Keep it readable */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button-main {
+  display: inline-block;
+  background-color: #E88D67; /* Warm Peach from header CTA */
+  color: #FFFFFF;
+  padding: 0.9rem 2.2rem; /* Larger CTA */
+  border-radius: 30px; /* Even more rounded */
+  text-decoration: none;
+  font-weight: 700; /* Bold for emphasis */
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cta-button-main:hover {
+  background-color: #D97C5A; /* Slightly darker peach on hover */
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Placeholder for hero image styles if added later */
+/*
+.hero-image-container {
+  margin-top: 2rem;
+}
+.hero-image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+*/
+
+/* Styles for Placeholder Sections */
+.placeholder-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  margin: 2.5rem 0;
+  border-radius: 20px;
+  background-color: #FAF7F5; /* A very light neutral for placeholders */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.placeholder-section h2 {
+  color: #B56576; /* Using the cta-headline color for consistency */
+  margin-bottom: 1rem;
+}
+
+/* How It Works Section - Styles for a boxed appearance */
+.how-it-works-section {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  margin: 2.5rem auto; /* Centered with auto margins */
+  border-radius: 20px;
+  background-color: #FFFFFF; /* White background for the box */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  max-width: 900px; /* Control max width of the box */
+}
+
+.how-it-works-section h2 {
+  color: #B56576; 
+  margin-bottom: 1.5rem; /* Adjusted margin */
+}
+
+.app-footer {
+  background-color: #ECE7E4; /* Slightly darker neutral for footer */
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #6A5D5D;
+  margin-top: 2.5rem; /* Ensure space above footer if ContactSection is full width */
+  border-radius: 0; /* Footer usually isn't rounded if it's edge-to-edge */
+  box-shadow: none;
+} 

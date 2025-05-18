@@ -1,0 +1,127 @@
+.app-header {
+  display: flex;
+  justify-content: space-between; /* This will space out left, center, right */
+  align-items: center;
+  padding: 0.75rem 3.5rem; /* Increased horizontal padding from 2.5rem to 3.5rem */
+  background-color: #F7F9F7; /* Very light, almost white-sage */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle drop-shadow */
+  position: sticky; /* Make header sticky */
+  top: 0;
+  z-index: 1000;
+  width: 100%; /* Ensure it spans full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background */
+}
+
+/* Scrolled state for header */
+.app-header.scrolled {
+  background-color: #E88D67; /* Peach background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly enhanced shadow when scrolled */
+}
+
+.app-header.scrolled .logo-center a,
+.app-header.scrolled .header-link {
+  color: white; /* White text for logo and links when scrolled */
+}
+
+/* Specific styling for upload button when scrolled, to maintain its distinct look but adapt colors */
+.app-header.scrolled .upload-button-style {
+  background-color: #FFFFFF; /* White background */
+  color: #E88D67; /* Peach text */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.app-header.scrolled .upload-button-style:hover {
+  background-color: #FFF0E1; /* Very light peach on hover */
+  color: #D97C5A; /* Darker peach text on hover */
+}
+
+.app-header.scrolled .header-link:hover {
+  color: #FFF0E1; /* Very light peach for hover text on normal links */
+}
+
+.header-left,
+.header-right {
+  flex: 1; /* Allow them to take space */
+}
+
+.header-right {
+  text-align: right; /* Align text to the right for this section */
+}
+
+.logo-center {
+  flex: 2; /* Give logo more space, can be adjusted */
+  text-align: center;
+}
+
+.logo-center a {
+  font-family: 'Pacifico', cursive; /* Fancy font for the logo */
+  font-size: 2.8rem; /* Significantly larger logo text */
+  text-decoration: none;
+  color: #E88D67; /* Warm Peach for the logo text, as per button hover */
+  transition: color 0.3s ease-in-out; /* Smooth transition for color */
+}
+
+.header-link {
+  text-decoration: none;
+  color: #607A8D; /* Muted soft blue/grey for links */
+  font-size: 1.1rem; /* Slightly larger link text */
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 15px; /* Softly rounded corners for links if they have bg/border */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header-link:hover {
+  color: #E88D67; /* Warm peach for hover text */
+}
+
+.upload-button-style {
+  background-color: #8DA9C4; /* Muted soft blue */
+  color: white;
+  padding: 0.6rem 1.2rem !important; /* Ensure padding overrides generic .header-link if needed */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease; /* Added color transition */
+}
+
+.upload-button-style:hover {
+  background-color: #7C98B3; /* Slightly darker blue */
+  color: white; /* Ensure text color remains white on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin-left: 1.5rem; /* Adjust spacing as needed */
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #555; /* Example color */
+  font-size: 1rem; /* Adjust size as needed */
+}
+
+.navigation a:hover {
+  color: #007bff; /* Example hover color */
+}
+
+.header-actions .cta-button {
+  background-color: #007bff; /* Example CTA color */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header-actions .cta-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+} 

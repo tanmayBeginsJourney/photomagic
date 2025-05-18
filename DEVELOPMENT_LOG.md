@@ -4,6 +4,33 @@ This file tracks significant commits and the changes they include.
 
 ---
 
+## Commit: feat(landing): implement refined hero carousel and header styling
+
+**Commit Hash:** 433f9b2 (on feature/landing-page branch)
+
+**Date:** (Please fill in the date of the commit)
+
+**Changes Included:**
+
+*   **Header Enhancements:**
+    *   Increased horizontal padding for a wider look.
+    *   Implemented scroll-based style changes: background becomes peach (#E88D67), logo and link text turn white.
+    *   Upload button inverts colors on scroll (white background, peach text).
+    *   Added smooth transitions for style changes.
+*   **Image Carousel Section:**
+    *   Changed section background to peach (#E88D67).
+    *   Added a jagged bottom edge effect using CSS `clip-path`.
+    *   Vertically centered the carousel within the peach section by adding `padding-top` to the section and adjusting `margin-bottom` of the carousel container.
+*   **Image Carousel Text:**
+    *   Significantly increased font size (to `5.5rem` as per user's final adjustment) and adjusted line-height for impact.
+    *   Refined padding, max-width, and text-shadow for readability.
+*   **Bug Fix:**
+    *   Fixed a rendering issue on `LandingPage.jsx` by adding a missing import for `ContactSection`.
+
+**Goal of this commit:** To implement the core visual and interactive elements of the hero section on the landing page, including the header scroll behavior and a highly stylized image carousel, bringing it closer to the design vision.
+
+---
+
 ## Commit: feat: initial project setup with Vite, React, ESLint, Prettier, and React Router
 
 **Commit Hash:** 79310e7 (on master branch)

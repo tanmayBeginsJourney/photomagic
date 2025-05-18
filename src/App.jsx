@@ -1,34 +1,21 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'; // You might want to adjust or remove default App.css styles later
+import LandingPage from './pages/LandingPage'; // Import the LandingPage
 
-// Placeholder components for pages (you'll create these later in src/pages/)
-function HomePage() {
-  return (
-    <div>
-      <h1>Welcome to Photomagic!</h1>
-      <p>This is the homepage.</p>
-      {/* Example links - you'll define actual pages/routes soon */}
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          {/* Add more links here as you create pages */}
-        </ul>
-      </nav>
-    </div>
-  );
-}
+// The HomePage placeholder can be removed as LandingPage will serve the root.
 
 function App() {
   return (
     <Router>
       <div className="App">
-        {/* You can add a common Header component here later */}
+        {/* Common Header might be part of LandingPage or rendered here based on design */}
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<LandingPage />} /> {/* Route to LandingPage */}
           {/* Define more routes here for Screen 2, Screen 3 etc. */}
           {/* e.g., <Route path="/upload" element={<UploadPage />} /> */}
+          {/* e.g., <Route path="/gallery" element={<GalleryPage />} /> */}
         </Routes>
-        {/* You can add a common Footer component here later */}
+        {/* Common Footer might be part of LandingPage or rendered here */}
       </div>
     </Router>
   );

@@ -1,9 +1,29 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Remove Vite default styles, we'll add our own as needed */
+
+/* .App class can be used for global app container styling if needed */
+.App {
+  /* min-height: 100vh; */ /* Covered by #root and body */
+  /* display: flex; */
+  /* flex-direction: column; */
 }
+
+#root {
+  /* These styles are removed to allow full-width layout by default */
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  /* text-align: center; */
+}
+
+/* .App class can be used for global app container styling if needed */
+.App {
+  /* min-height: 100vh; */ /* Covered by #root and body */
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+/* Remove other Vite default styles */
+/* .logo, .logo:hover, .logo.react:hover, @keyframes logo-spin, etc. */
 
 .logo {
   height: 6em;

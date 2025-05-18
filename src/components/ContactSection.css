@@ -1,0 +1,98 @@
+.contact-section {
+  background-color: #EAE6F3; /* Soft, muted lavender */
+  padding-top: 100px; /* Increased padding to make space for taller, more complex wave */
+  padding-bottom: 4rem;
+  position: relative;
+  color: #352F44; /* Darker, slightly muted purple for text */
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0; /* Position wave at the very top of the section */
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100px; /* Height of the wave SVG */
+  /* Jagged wave SVG - fill color should be #FFF9F5 (body background) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='%23FFF9F5' fill-opacity='1' d='M0,64L40,61.3C80,59,160,53,240,64C320,75,400,101,480,106.7C560,112,640,96,720,80C800,64,880,48,960,45.3C1040,43,1120,53,1200,58.7C1280,64,1360,64,1400,64L1440,64L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover; /* Or 100% 100% */
+  /* No transform needed if SVG is designed to be at the top and connect downwards */
+  z-index: 0; /* Behind content wrapper */
+}
+
+.contact-content-wrapper {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 1.5rem; /* Padding for content within the max-width */
+  position: relative; /* To ensure content is above the ::before pseudo-element */
+  z-index: 1;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700; /* Inter bold */
+  margin-bottom: 2.5rem;
+  color: inherit; /* Inherits from .contact-section */
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #D0C9E0; /* Lighter purple border */
+  border-radius: 12px; /* Softer rounded corners */
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  background-color: #F7F5FA; /* Slightly off-white for fields */
+  color: #352F44;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #A390D4; /* Darker purple for focus */
+  box-shadow: 0 0 0 3px rgba(163, 144, 212, 0.25);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  display: block;
+  width: auto; /* Fit content or make full width */
+  margin: 1.5rem auto 0 auto; /* Center button */
+  background-color: #E88D67; /* Warm Peach from other CTAs */
+  color: #FFFFFF;
+  padding: 0.9rem 2.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.submit-button:hover {
+  background-color: #D97C5A; /* Darker peach */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+} 
