@@ -69,6 +69,9 @@ In the project directory, you can run:
 
 (Details to be added later, e.g., branching strategy, code review process.)
 
+
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/tanmayBeginsJourney/photomagic?utm_source=oss&utm_medium=github&utm_campaign=tanmayBeginsJourney%2Fphotomagic&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+
 ---
 
 *This project follows the development plan outlined in `initial-website-sketch.pdf` and guided by AI-assisted pair programming.*
